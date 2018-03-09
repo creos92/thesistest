@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./devel/setup.bash
-sed -i "s/indirizzoipserver/$IP/g" ../Client/certificati/client1/client.conf 
+sed -i "s/indirizzoipserver/"$IP"/g" ../Client/certificati/client1/client.conf
 chmod +rx /Client/certificati/client1/start_client.sh &&
 cd /Client/certificati/client1 && sync && ./start_client.sh &
 sleep 15s
