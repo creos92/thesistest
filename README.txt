@@ -1,4 +1,5 @@
 Da linea di comando:
+export IP=$IP
 Lato server:
 su root 
 xhost +local:root 
