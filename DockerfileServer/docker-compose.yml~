@@ -1,0 +1,12 @@
+parloma_server:
+  image: parloma:server
+  stdin_open: true
+  tty: true
+  privileged: true
+  ports:
+    - 1194:1194
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix:rw
+  environment:
+    - DISPLAY=$DISPLAY
+    - QT_X11_NO_MITSHM=1
