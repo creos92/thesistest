@@ -11,7 +11,7 @@ Lato Client:
 su root
 svn checkout https://github.com/creos92/thesistest.git/trunk/DockerfileClient
 docker build DockerfileClient/ -t parloma:clienttest
-docker-compose run parloma_clienttest
+docker-compose run -e IP=192.168.0.107 parloma_clienttest 
 
 
 Altro:
