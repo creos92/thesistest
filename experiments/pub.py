@@ -11,7 +11,7 @@ def talker():
     rospy.init_node('talker', anonymous=True)
     #rate = rospy.Rate(10) # 10hz
     msg=Datats()
-    for i in range(0,100):
+    for i in range(0,10000):
         msg.data= ''.join(['.' for x in range(i)])
         for y in range(0,11):
             msg.ts = rospy.get_rostime()
