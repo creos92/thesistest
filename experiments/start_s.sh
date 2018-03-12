@@ -7,4 +7,4 @@ roscore &
 sleep 2s
 export ROS_IP=10.8.0.1
 export ROS_MASTER_URI=http://10.8.0.1:11311
-cd /experiments && python sub.py && cat data.dat
+cd /experiments && source ./devel/setup.bash && python sub.py && cat data.dat
