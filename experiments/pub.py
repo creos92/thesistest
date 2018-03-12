@@ -7,7 +7,7 @@ from speedtest.msg import Datats
 from std_msgs.msg import String
 
 def talker():
-    pub = rospy.Publisher('chatter', Datats, queue_size=10000)
+    pub = rospy.Publisher('chatter', Datats, queue_size=120000)
     rospy.init_node('talker', anonymous=True)
     #rate = rospy.Rate(10) # 10hz
     msg=Datats()
@@ -19,6 +19,7 @@ def talker():
     msg.data="0"
     print "pubblico uno 0\n"
     pub.publish(msg)
+    time.sleep(600)
 
 if __name__ == '__main__':
     try:
