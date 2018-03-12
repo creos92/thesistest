@@ -16,9 +16,13 @@ def talker():
         for y in range(0,11):
             msg.ts = rospy.get_rostime()
             pub.publish(msg)
+    msg.data="0"
+    print "pubblico uno 0\n"
+    pub.publish(msg)
 
 if __name__ == '__main__':
     try:
         talker()
     except rospy.ROSInterruptException:
         pass
+
