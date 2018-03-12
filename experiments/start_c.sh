@@ -6,4 +6,5 @@ cd /Client/certificati/client1 && sync && ./start_client.sh &
 sleep 15s
 export ROS_IP=10.8.0.6
 export ROS_MASTER_URI=http://10.8.0.1:11311
+ntpd
 cd /experiments && python pub.py
