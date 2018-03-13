@@ -8,7 +8,7 @@ from std_msgs.msg import String
 
 def callback(data):
     msg=[]
-    now = rospy.get_rostime()
+    now = rospy.Time.now()
     msg.append(str(len(data.data)))
     msg.append("{}.{}".format(data.ts.secs, data.ts.nsecs))
     msg.append("{}.{}".format(now.secs, now.nsecs))
