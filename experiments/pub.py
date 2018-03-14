@@ -7,7 +7,7 @@ from speedtest.msg import Datats
 from std_msgs.msg import String
 
 def talker():
-    pub = rospy.Publisher('chatter', Datats, queue_size=5500)
+    pub = rospy.Publisher('chatter', Datats, queue_size=0)
     rospy.init_node('talker', anonymous=True)
     #rate = rospy.Rate(2000) # 10hz
     msg=Datats()
