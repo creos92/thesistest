@@ -9,7 +9,7 @@ from std_msgs.msg import String
 def talker():
     pub = rospy.Publisher('chatter', Datats, queue_size=0)
     rospy.init_node('talker', anonymous=True)
-    #rate = rospy.Rate(2000) # 10hz
+    rate = rospy.Rate(10) # 10hz
     msg=Datats()
     print "invio dati"
     time.sleep(2)
@@ -19,7 +19,7 @@ def talker():
             msg.ts = rospy.Time.now()
             #print msg.ts
             pub.publish(msg)
-        #rate.sleep()
+            rate.sleep()
     msg.data="0"
     print "termine invio dati\n"
     pub.publish(msg)
